@@ -1,6 +1,8 @@
-using Microsoft.AspNetCore.Mvc;
 using Portfolio.Models;
+using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+
+using Microsoft.AspNetCore.Localization;
 
 namespace Portfolio.Controllers
 {
@@ -18,7 +20,12 @@ namespace Portfolio.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Skills()
+        {
+            return View();
+        }
+
+        public IActionResult WorkExperience()
         {
             return View();
         }
@@ -27,6 +34,16 @@ namespace Portfolio.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        [HttpPost]
+        public IActionResult CultureConnexion(string newCulture, string URL)
+        {
+            Response.Cookies.Append(CookieRequestCultureProvider.DefaultCookieName,
+                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(newCulture)),
+                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddHours(3)});
+
+            return LocalRedirect(URL);
         }
     }
 }
