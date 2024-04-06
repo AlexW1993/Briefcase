@@ -1,47 +1,363 @@
 ﻿@using Microsoft.AspNetCore.Mvc.Localization;
-@inject IViewLocalizer watchResource;
+@model ProgrammingTechnologies;
 
-<div style="margin-top: -105px">
-    <div class="row justify-content-md-center text-center">
-        <div class="col col-3 bg-white habilidades" style="border-radius: 15px 0 0 15px; box-shadow: 0 5px 5px 0 gray">
-            <i class="bi bi-back"></i>
-            <h3>Back-end</h3>
-            <p>
-                J'ai travaillé dans differents structures et des test pour le logiciel.'
-            </p>
-            <p class="text-primary cabecera">
-                Langage:
-            </p>
-            <p>
-                Java, C#, Kotlin
-            </p>
-            <p class="text-primary cabecera">
-                Expérience:
-            </p>
-            <ul>
-                <li>Web APIs</li>
-                <li>ASP.NET Core MVC</li>
-                <li>Application Android</li>
-            </ul>
+@{
+    int halfLenguages;
+    List<string> column1;
+    List<string> column2;
+
+}
+
+
+<div id="Skills">
+
+    <div class="row text-center justify-content-md-center" style="border-radius: 200px 200px 0 0;box-shadow: 0px -5px 5px 0px gray, 5px 0px 5px 0px gray, -5px 0px 5px 0px gray;">
+        <div class="col">
+            <h3>Language</h3>
         </div>
-        <div class="col col-3 bg-white habilidades" style="border-radius: 0 15px 15px 0; box-shadow: 0 5px 5px 0 gray">
-            <i class="bi bi-front"></i>
-            <h3>Front-end</h3>
-            <p> Je peux créer front-ends en utilisant le besoin du client.</p>
-            <p class="text-primary cabecera">
-                Langage:
-            </p>
-            <p>
-                HTML, TypeScript
-            </p>
-            <p class="text-primary cabecera">
-                Expérience:
-            </p>
+    </div>
+    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+        @{
+            halfLenguages = Model.Languages.Count() / 2;
+
+            if (Model.Languages.Count() % 2 != 0)
+            {
+                halfLenguages += 1;
+            }
+
+            column1 = Model.Languages.Take(halfLenguages).ToList();
+            column2 = Model.Languages.Skip(halfLenguages).ToList();
+        }
+        <div class="col">
+        @foreach (var language in column1)
+        {        
             <ul>
-                <li>Angular</li>
-                <li>Application Web</li>
-                <li>Application Android</li>
-            </ul>
+                <li>@language</li>
+            </ul>    
+        }
+        </div>
+        <div class="col">
+        @foreach (var language in column2)
+        {    
+            <ul>
+                <li>@language</li>
+            </ul>      
+        }
+        </div>
+    </div>
+
+    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+        <div class="col">
+            <h3>Software</h3>
+        </div>
+    </div>
+    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+        @{
+            halfLenguages = Model.Software.Count() / 2;
+
+            if (Model.Software.Count() % 2 != 0)
+            {
+                halfLenguages += 1;
+            }
+
+            column1 = Model.Software.Take(halfLenguages).ToList();
+            column2 = Model.Software.Skip(halfLenguages).ToList();
+        }
+        <div class="col">
+            @foreach (var software in column1)
+            {
+                <ul>
+                    <li>@software</li>
+                </ul>
+            }
+        </div>
+        <div class="col">
+            @foreach (var software in column2)
+            {
+                <ul>
+                    <li>@software</li>
+                </ul>
+            }
+        </div>
+    </div>
+
+    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+        <div class="col">
+            <h3>Frameworks</h3>
+        </div>
+    </div>
+    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+        @{
+            halfLenguages = Model.Frameworks.Count() / 2;
+
+            if (Model.Frameworks.Count() % 2 != 0)
+            {
+                halfLenguages += 1;
+            }
+
+            column1 = Model.Frameworks.Take(halfLenguages).ToList();
+            column2 = Model.Frameworks.Skip(halfLenguages).ToList();
+        }
+        <div class="col">
+            @foreach (var frameworks in column1)
+            {
+                <ul>
+                    <li>@frameworks</li>
+                </ul>
+            }
+        </div>
+        <div class="col">
+            @foreach (var frameworks in column2)
+            {
+                <ul>
+                    <li>@frameworks</li>
+                </ul>
+            }
+        </div>
+    </div>
+
+    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+        <div class="col">
+            <h3>VersionControl</h3>
+        </div>
+    </div>
+    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+        @{
+            halfLenguages = Model.VersionControl.Count() / 2;
+
+            if (Model.VersionControl.Count() % 2 != 0)
+            {
+                halfLenguages += 1;
+            }
+
+            column1 = Model.VersionControl.Take(halfLenguages).ToList();
+            column2 = Model.VersionControl.Skip(halfLenguages).ToList();
+        }
+        <div class="col">
+            @foreach (var versionControl in column1)
+            {
+                <ul>
+                    <li>@versionControl</li>
+                </ul>
+            }
+        </div>
+        <div class="col">
+            @foreach (var versionControl in column2)
+            {
+                <ul>
+                    <li>@versionControl</li>
+                </ul>
+            }
+        </div>
+    </div>
+
+    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+        <div class="col">
+            <h3>Architectures</h3>
+        </div>
+    </div>
+    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+        @{
+            halfLenguages = Model.Architectures.Count() / 2;
+
+            if (Model.Architectures.Count() % 2 != 0)
+            {
+                halfLenguages += 1;
+            }
+
+            column1 = Model.Architectures.Take(halfLenguages).ToList();
+            column2 = Model.Architectures.Skip(halfLenguages).ToList();
+        }
+        <div class="col">
+            @foreach (var architectures in column1)
+            {
+                <ul>
+                    <li>@architectures</li>
+                </ul>
+            }
+        </div>
+        <div class="col">
+            @foreach (var architectures in column2)
+            {
+                <ul>
+                    <li>@architectures</li>
+                </ul>
+            }
+        </div>
+    </div>
+
+    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+        <div class="col">
+            <h3>WorkMethods</h3>
+        </div>
+    </div>
+    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+        @{
+            halfLenguages = Model.WorkMethods.Count() / 2;
+
+            if (Model.WorkMethods.Count() % 2 != 0)
+            {
+                halfLenguages += 1;
+            }
+
+            column1 = Model.WorkMethods.Take(halfLenguages).ToList();
+            column2 = Model.WorkMethods.Skip(halfLenguages).ToList();
+        }
+        <div class="col">
+            @foreach (var workMethods in column1)
+            {
+                <ul>
+                    <li>@workMethods</li>
+                </ul>
+            }
+        </div>
+        <div class="col">
+            @foreach (var workMethods in column2)
+            {
+                <ul>
+                    <li>@workMethods</li>
+                </ul>
+            }
+        </div>
+    </div>
+
+    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+        <div class="col">
+            <h3>Diagrams</h3>
+        </div>
+    </div>
+    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+        @{
+            halfLenguages = Model.Diagrams.Count() / 2;
+
+            if (Model.Diagrams.Count() % 2 != 0)
+            {
+                halfLenguages += 1;
+            }
+
+            column1 = Model.Diagrams.Take(halfLenguages).ToList();
+            column2 = Model.Diagrams.Skip(halfLenguages).ToList();
+        }
+        <div class="col">
+            @foreach (var diagrams in column1)
+            {
+                <ul>
+                    <li>@diagrams</li>
+                </ul>
+            }
+        </div>
+        <div class="col">
+            @foreach (var diagrams in column2)
+            {
+                <ul>
+                    <li>@diagrams</li>
+                </ul>
+            }
+        </div>
+    </div>
+
+    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+        <div class="col">
+            <h3>APIS</h3>
+        </div>
+    </div>
+    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+        @{
+            halfLenguages = Model.APIS.Count() / 2;
+
+            if (Model.APIS.Count() % 2 != 0)
+            {
+                halfLenguages += 1;
+            }
+
+            column1 = Model.APIS.Take(halfLenguages).ToList();
+            column2 = Model.APIS.Skip(halfLenguages).ToList();
+        }
+        <div class="col">
+            @foreach (var apis in column1)
+            {
+                <ul>
+                    <li>@apis</li>
+                </ul>
+            }
+        </div>
+        <div class="col">
+            @foreach (var apis in column2)
+            {
+                <ul>
+                    <li>@apis</li>
+                </ul>
+            }
+        </div>
+    </div>
+
+    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+        <div class="col">
+            <h3>Tests</h3>
+        </div>
+    </div>
+    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+        @{
+            halfLenguages = Model.Tests.Count() / 2;
+
+            if (Model.Tests.Count() % 2 != 0)
+            {
+                halfLenguages += 1;
+            }
+
+            column1 = Model.Tests.Take(halfLenguages).ToList();
+            column2 = Model.Tests.Skip(halfLenguages).ToList();
+        }
+        <div class="col">
+            @foreach (var tests in column1)
+            {
+                <ul>
+                    <li>@tests</li>
+                </ul>
+            }
+        </div>
+        <div class="col">
+            @foreach (var tests in column2)
+            {
+                <ul>
+                    <li>@tests</li>
+                </ul>
+            }
+        </div>
+    </div>
+
+    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+        <div class="col">
+            <h3>Others</h3>
+        </div>
+    </div>
+    <div class="row text-center justify-content-md-center" style="border-radius: 0 15px 15px 0; box-shadow: 0 5px 5px 0 gray">
+        @{
+            halfLenguages = Model.Others.Count() / 2;
+
+            if (Model.Others.Count() % 2 != 0)
+            {
+                halfLenguages += 1;
+            }
+
+            column1 = Model.Others.Take(halfLenguages).ToList();
+            column2 = Model.Others.Skip(halfLenguages).ToList();
+        }
+        <div class="col">
+            @foreach (var others in column1)
+            {
+                <ul>
+                    <li>@others</li>
+                </ul>
+            }
+        </div>
+        <div class="col">
+            @foreach (var others in column2)
+            {
+                <ul>
+                    <li>@others</li>
+                </ul>
+            }
         </div>
     </div>
 </div>
