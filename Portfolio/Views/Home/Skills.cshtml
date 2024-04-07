@@ -2,362 +2,288 @@
 @model ProgrammingTechnologies;
 
 @{
-    int halfLenguages;
-    List<string> column1;
-    List<string> column2;
-
+    int amount;
+    List<List<string>> lists;
+    const int maximunForTwoColumns = 5;
 }
-
 
 <div id="Skills">
 
-    <div class="row text-center justify-content-md-center" style="border-radius: 200px 200px 0 0;box-shadow: 0px -5px 5px 0px gray, 5px 0px 5px 0px gray, -5px 0px 5px 0px gray;">
+    <div class="row text-center justify-content-md-center" id="TopSkillsTable">
         <div class="col">
             <h3>Language</h3>
         </div>
     </div>
-    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
         @{
-            halfLenguages = Model.Languages.Count() / 2;
-
-            if (Model.Languages.Count() % 2 != 0)
+            if (Model.Languages.Count() < maximunForTwoColumns)
             {
-                halfLenguages += 1;
-            }
+                lists = Model.GetListWithPartitions(Model.Languages, 2);
+            } else
+            {
+                lists = Model.GetListWithPartitions(Model.Languages, 3);
+            }   
+        }
 
-            column1 = Model.Languages.Take(halfLenguages).ToList();
-            column2 = Model.Languages.Skip(halfLenguages).ToList();
+        @foreach(var list in lists)
+        {
+            <div class="col">
+                @foreach (var language in list)
+                {
+                    <p>@language</p>
+                }
+            </div> 
         }
-        <div class="col">
-        @foreach (var language in column1)
-        {        
-            <ul>
-                <li>@language</li>
-            </ul>    
-        }
-        </div>
-        <div class="col">
-        @foreach (var language in column2)
-        {    
-            <ul>
-                <li>@language</li>
-            </ul>      
-        }
-        </div>
     </div>
 
-    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
         <div class="col">
             <h3>Software</h3>
         </div>
     </div>
-    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
         @{
-            halfLenguages = Model.Software.Count() / 2;
-
-            if (Model.Software.Count() % 2 != 0)
+            if (Model.Software.Count() < maximunForTwoColumns)
             {
-                halfLenguages += 1;
+                lists = Model.GetListWithPartitions(Model.Software, 2);
             }
-
-            column1 = Model.Software.Take(halfLenguages).ToList();
-            column2 = Model.Software.Skip(halfLenguages).ToList();
+            else
+            {
+                lists = Model.GetListWithPartitions(Model.Software, 3);
+            }
         }
-        <div class="col">
-            @foreach (var software in column1)
-            {
-                <ul>
-                    <li>@software</li>
-                </ul>
-            }
-        </div>
-        <div class="col">
-            @foreach (var software in column2)
-            {
-                <ul>
-                    <li>@software</li>
-                </ul>
-            }
-        </div>
+
+        @foreach (var list in lists)
+        {
+            <div class="col">
+                @foreach (var software in list)
+                {
+                    <p>@software</p>
+                }
+            </div>
+        }
     </div>
 
-    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
         <div class="col">
             <h3>Frameworks</h3>
         </div>
     </div>
-    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
         @{
-            halfLenguages = Model.Frameworks.Count() / 2;
-
-            if (Model.Frameworks.Count() % 2 != 0)
+            if (Model.Frameworks.Count() < maximunForTwoColumns)
             {
-                halfLenguages += 1;
+                lists = Model.GetListWithPartitions(Model.Frameworks, 2);
             }
-
-            column1 = Model.Frameworks.Take(halfLenguages).ToList();
-            column2 = Model.Frameworks.Skip(halfLenguages).ToList();
+            else
+            {
+                lists = Model.GetListWithPartitions(Model.Frameworks, 3);
+            }
         }
-        <div class="col">
-            @foreach (var frameworks in column1)
-            {
-                <ul>
-                    <li>@frameworks</li>
-                </ul>
-            }
-        </div>
-        <div class="col">
-            @foreach (var frameworks in column2)
-            {
-                <ul>
-                    <li>@frameworks</li>
-                </ul>
-            }
-        </div>
+
+        @foreach (var list in lists)
+        {
+            <div class="col">
+                @foreach (var framework in list)
+                {
+                    <p>@framework</p>
+                }
+            </div>
+        }
     </div>
 
-    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
         <div class="col">
             <h3>VersionControl</h3>
         </div>
     </div>
-    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
         @{
-            halfLenguages = Model.VersionControl.Count() / 2;
-
-            if (Model.VersionControl.Count() % 2 != 0)
+            if (Model.VersionControl.Count() < maximunForTwoColumns)
             {
-                halfLenguages += 1;
+                lists = Model.GetListWithPartitions(Model.VersionControl, 2);
             }
-
-            column1 = Model.VersionControl.Take(halfLenguages).ToList();
-            column2 = Model.VersionControl.Skip(halfLenguages).ToList();
+            else
+            {
+                lists = Model.GetListWithPartitions(Model.VersionControl, 3);
+            }
         }
-        <div class="col">
-            @foreach (var versionControl in column1)
-            {
-                <ul>
-                    <li>@versionControl</li>
-                </ul>
-            }
-        </div>
-        <div class="col">
-            @foreach (var versionControl in column2)
-            {
-                <ul>
-                    <li>@versionControl</li>
-                </ul>
-            }
-        </div>
+
+        @foreach (var list in lists)
+        {
+            <div class="col">
+                @foreach (var versionControl in list)
+                {
+                    <p>@versionControl</p>
+                }
+            </div>
+        }
     </div>
 
-    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
         <div class="col">
             <h3>Architectures</h3>
         </div>
     </div>
-    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
         @{
-            halfLenguages = Model.Architectures.Count() / 2;
-
-            if (Model.Architectures.Count() % 2 != 0)
+            if (Model.Architectures.Count() < maximunForTwoColumns)
             {
-                halfLenguages += 1;
+                lists = Model.GetListWithPartitions(Model.Architectures, 2);
             }
-
-            column1 = Model.Architectures.Take(halfLenguages).ToList();
-            column2 = Model.Architectures.Skip(halfLenguages).ToList();
+            else
+            {
+                lists = Model.GetListWithPartitions(Model.Architectures, 3);
+            }
         }
-        <div class="col">
-            @foreach (var architectures in column1)
-            {
-                <ul>
-                    <li>@architectures</li>
-                </ul>
-            }
-        </div>
-        <div class="col">
-            @foreach (var architectures in column2)
-            {
-                <ul>
-                    <li>@architectures</li>
-                </ul>
-            }
-        </div>
+
+        @foreach (var list in lists)
+        {
+            <div class="col">
+                @foreach (var architecture in list)
+                {
+                    <p>@architecture</p>
+                }
+            </div>
+        }
     </div>
 
-    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
         <div class="col">
             <h3>WorkMethods</h3>
         </div>
     </div>
-    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
         @{
-            halfLenguages = Model.WorkMethods.Count() / 2;
-
-            if (Model.WorkMethods.Count() % 2 != 0)
+            if (Model.WorkMethods.Count() < maximunForTwoColumns)
             {
-                halfLenguages += 1;
+                lists = Model.GetListWithPartitions(Model.WorkMethods, 2);
             }
-
-            column1 = Model.WorkMethods.Take(halfLenguages).ToList();
-            column2 = Model.WorkMethods.Skip(halfLenguages).ToList();
+            else
+            {
+                lists = Model.GetListWithPartitions(Model.WorkMethods, 3);
+            }
         }
-        <div class="col">
-            @foreach (var workMethods in column1)
-            {
-                <ul>
-                    <li>@workMethods</li>
-                </ul>
-            }
-        </div>
-        <div class="col">
-            @foreach (var workMethods in column2)
-            {
-                <ul>
-                    <li>@workMethods</li>
-                </ul>
-            }
-        </div>
+
+        @foreach (var list in lists)
+        {
+            <div class="col">
+                @foreach (var workMethod in list)
+                {
+                    <p>@workMethod</p>
+                }
+            </div>
+        }
     </div>
 
-    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
         <div class="col">
             <h3>Diagrams</h3>
         </div>
     </div>
-    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
         @{
-            halfLenguages = Model.Diagrams.Count() / 2;
-
-            if (Model.Diagrams.Count() % 2 != 0)
+            if (Model.Diagrams.Count() < maximunForTwoColumns)
             {
-                halfLenguages += 1;
+                lists = Model.GetListWithPartitions(Model.Diagrams, 2);
             }
-
-            column1 = Model.Diagrams.Take(halfLenguages).ToList();
-            column2 = Model.Diagrams.Skip(halfLenguages).ToList();
+            else
+            {
+                lists = Model.GetListWithPartitions(Model.Diagrams, 3);
+            }
         }
-        <div class="col">
-            @foreach (var diagrams in column1)
-            {
-                <ul>
-                    <li>@diagrams</li>
-                </ul>
-            }
-        </div>
-        <div class="col">
-            @foreach (var diagrams in column2)
-            {
-                <ul>
-                    <li>@diagrams</li>
-                </ul>
-            }
-        </div>
+
+        @foreach (var list in lists)
+        {
+            <div class="col">
+                @foreach (var diagram in list)
+                {
+                    <p>@diagram</p>
+                }
+            </div>
+        }
     </div>
 
-    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
         <div class="col">
             <h3>APIS</h3>
         </div>
     </div>
-    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
         @{
-            halfLenguages = Model.APIS.Count() / 2;
-
-            if (Model.APIS.Count() % 2 != 0)
+            if (Model.APIS.Count() < maximunForTwoColumns)
             {
-                halfLenguages += 1;
+                lists = Model.GetListWithPartitions(Model.APIS, 2);
             }
-
-            column1 = Model.APIS.Take(halfLenguages).ToList();
-            column2 = Model.APIS.Skip(halfLenguages).ToList();
+            else
+            {
+                lists = Model.GetListWithPartitions(Model.APIS, 3);
+            }
         }
-        <div class="col">
-            @foreach (var apis in column1)
-            {
-                <ul>
-                    <li>@apis</li>
-                </ul>
-            }
-        </div>
-        <div class="col">
-            @foreach (var apis in column2)
-            {
-                <ul>
-                    <li>@apis</li>
-                </ul>
-            }
-        </div>
+
+        @foreach (var list in lists)
+        {
+            <div class="col">
+                @foreach (var API in list)
+                {
+                    <p>@API</p>
+                }
+            </div>
+        }
     </div>
 
-    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
         <div class="col">
             <h3>Tests</h3>
         </div>
     </div>
-    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
         @{
-            halfLenguages = Model.Tests.Count() / 2;
-
-            if (Model.Tests.Count() % 2 != 0)
+            if (Model.Tests.Count() < maximunForTwoColumns)
             {
-                halfLenguages += 1;
+                lists = Model.GetListWithPartitions(Model.Tests, 2);
             }
-
-            column1 = Model.Tests.Take(halfLenguages).ToList();
-            column2 = Model.Tests.Skip(halfLenguages).ToList();
+            else
+            {
+                lists = Model.GetListWithPartitions(Model.Tests, 3);
+            }
         }
-        <div class="col">
-            @foreach (var tests in column1)
-            {
-                <ul>
-                    <li>@tests</li>
-                </ul>
-            }
-        </div>
-        <div class="col">
-            @foreach (var tests in column2)
-            {
-                <ul>
-                    <li>@tests</li>
-                </ul>
-            }
-        </div>
+
+        @foreach (var list in lists)
+        {
+            <div class="col">
+                @foreach (var test in list)
+                {
+                    <p>@test</p>
+                }
+            </div>
+        }
     </div>
 
-    <div class="row text-center justify-content-md-center" style="box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;">
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
         <div class="col">
             <h3>Others</h3>
         </div>
     </div>
-    <div class="row text-center justify-content-md-center" style="border-radius: 0 15px 15px 0; box-shadow: 0 5px 5px 0 gray">
-        @{
-            halfLenguages = Model.Others.Count() / 2;
-
-            if (Model.Others.Count() % 2 != 0)
-            {
-                halfLenguages += 1;
-            }
-
-            column1 = Model.Others.Take(halfLenguages).ToList();
-            column2 = Model.Others.Skip(halfLenguages).ToList();
+    <div class="row text-center justify-content-md-center" id="LowerSkillsTable">
+    @{
+        if (Model.Others.Count() < maximunForTwoColumns)
+        {
+            lists = Model.GetListWithPartitions(Model.Others, 2);
         }
+        else
+        {
+            lists = Model.GetListWithPartitions(Model.Others, 3);
+        }
+    }
+
+    @foreach (var list in lists)
+    {
         <div class="col">
-            @foreach (var others in column1)
+            @foreach (var others in list)
             {
-                <ul>
-                    <li>@others</li>
-                </ul>
+                <p>@others</p>
             }
         </div>
-        <div class="col">
-            @foreach (var others in column2)
-            {
-                <ul>
-                    <li>@others</li>
-                </ul>
-            }
-        </div>
-    </div>
+    }
 </div>

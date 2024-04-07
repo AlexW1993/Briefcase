@@ -9,58 +9,27 @@
     margin: 100px;
 }
 
-#Skills > div > div {
-    border-radius: 200px;
-    box-shadow: 50px;
-    border-color:red;
+#Skills  div  div  h3 {
+    color:red;
+    font-weight: 1000;
 }
 
-.front-end {
-    background: white;
+#Skills div div p {
     color: black;
+    font-weight: 500;
 }
 
-.back-end {
-    background: black;
-    color:white;
+#TopSkillsTable {
+    border-radius: 50px 50px 0 0;
+    box-shadow: 0px -5px 5px 0px gray, 5px 0px 5px 0px gray, -5px 0px 5px 0px gray;
 }
 
-/*#foto {
-    width: 200px;
-    margin: 2rem 0;
-    border-radius: 50%;
-    border: 2px solid black;
+.CentralSkillsTable {
+    box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;
 }
 
-.seccion-bienvenida {
-    margin: 5rem 0 10rem 0;
-    color: white;
+#LowerSkillsTable {
+    border-radius: 0 0 50px 50px;
+    box-shadow: 0px 5px 5px 5px gray, 5px 0px 5px -5px gray, 5px 0 5px -5px gray;
 }
 
-    .seccion-bienvenida h1 {
-        margin-bottom: 1rem;
-    }
-
-    .seccion-bienvenida p {
-        font-family: sans-serif;
-        line-height: 1.5;
-        font-size: 1.25rem;
-    }
-
-#imagen-donet {
-    width: 250px;
-}*/
-
-.cabecera {
-    font-weight: bold;
-}
-
-.habilidades ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.habilidades i {
-    color: darkred;
-    font-size: 50px;
-}

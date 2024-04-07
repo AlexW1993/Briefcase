@@ -18,5 +18,20 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    animation: changeColor 5s infinite alternate;
+}
+
+@keyframes changeColor {
+    0% {
+        background-color: black;
+    }
+
+    50% {
+        background-color: brown;
+    }
+
+    100% {
+        background-color: white;
+    }
 }

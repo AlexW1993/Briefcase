@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Reflection;
 
 namespace Portfolio.Models
 {
@@ -116,6 +117,32 @@ namespace Portfolio.Models
             };
 
             return others.ToList();
+        }
+
+        public List<List<string>> GetListWithPartitions(List<string> list, int partition)
+        {
+            var amount = list.Count() / partition;
+            List<List<string>> result = new List<List<string>>();
+
+            if (list.Count() % partition != 0)
+            {
+                amount += 1;
+            }
+
+            switch (partition)
+            {
+                case 3:
+                    result.Add(list.Take(amount).ToList());
+                    result.Add(list.Skip(amount).Take(amount).ToList());
+                    result.Add(list.Skip(amount * 2).ToList());
+                    break;
+                case 2:
+                    result.Add(list.Take(amount).ToList());
+                    result.Add(list.Skip(amount).ToList());
+                    break;
+            }
+
+            return result;
         }
     }
 }
