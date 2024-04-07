@@ -19,19 +19,20 @@ html {
 
 body {
     margin-bottom: 60px;
-    animation: changeColor 5s infinite alternate;
 }
 
-@keyframes changeColor {
-    0% {
-        background-color: black;
-    }
+body header {
+    background-image: url('../Image/Tikal.jpg');
+    background-size: cover;
+    background-position: top;
+}
 
-    50% {
-        background-color: brown;
-    }
+body footer {
+    background-image: url('../Image/Livington.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
 
-    100% {
-        background-color: white;
-    }
+body footer div {
+    color: yellow;
 }
