@@ -1,47 +1,289 @@
 ﻿@using Microsoft.AspNetCore.Mvc.Localization;
-@inject IViewLocalizer watchResource;
+@model ProgrammingTechnologies;
 
-<div style="margin-top: -105px">
-    <div class="row justify-content-md-center text-center">
-        <div class="col col-3 bg-white habilidades" style="border-radius: 15px 0 0 15px; box-shadow: 0 5px 5px 0 gray">
-            <i class="bi bi-back"></i>
-            <h3>Back-end</h3>
-            <p>
-                J'ai travaillé dans differents structures et des test pour le logiciel.'
-            </p>
-            <p class="text-primary cabecera">
-                Langage:
-            </p>
-            <p>
-                Java, C#, Kotlin
-            </p>
-            <p class="text-primary cabecera">
-                Expérience:
-            </p>
-            <ul>
-                <li>Web APIs</li>
-                <li>ASP.NET Core MVC</li>
-                <li>Application Android</li>
-            </ul>
-        </div>
-        <div class="col col-3 bg-white habilidades" style="border-radius: 0 15px 15px 0; box-shadow: 0 5px 5px 0 gray">
-            <i class="bi bi-front"></i>
-            <h3>Front-end</h3>
-            <p> Je peux créer front-ends en utilisant le besoin du client.</p>
-            <p class="text-primary cabecera">
-                Langage:
-            </p>
-            <p>
-                HTML, TypeScript
-            </p>
-            <p class="text-primary cabecera">
-                Expérience:
-            </p>
-            <ul>
-                <li>Angular</li>
-                <li>Application Web</li>
-                <li>Application Android</li>
-            </ul>
+@{
+    int amount;
+    List<List<string>> lists;
+    const int maximunForTwoColumns = 5;
+}
+
+<div id="Skills">
+
+    <div class="row text-center justify-content-md-center" id="TopSkillsTable">
+        <div class="col">
+            <h3>Language</h3>
         </div>
     </div>
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
+        @{
+            if (Model.Languages.Count() < maximunForTwoColumns)
+            {
+                lists = Model.GetListWithPartitions(Model.Languages, 2);
+            } else
+            {
+                lists = Model.GetListWithPartitions(Model.Languages, 3);
+            }   
+        }
+
+        @foreach(var list in lists)
+        {
+            <div class="col">
+                @foreach (var language in list)
+                {
+                    <p>@language</p>
+                }
+            </div> 
+        }
+    </div>
+
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
+        <div class="col">
+            <h3>Software</h3>
+        </div>
+    </div>
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
+        @{
+            if (Model.Software.Count() < maximunForTwoColumns)
+            {
+                lists = Model.GetListWithPartitions(Model.Software, 2);
+            }
+            else
+            {
+                lists = Model.GetListWithPartitions(Model.Software, 3);
+            }
+        }
+
+        @foreach (var list in lists)
+        {
+            <div class="col">
+                @foreach (var software in list)
+                {
+                    <p>@software</p>
+                }
+            </div>
+        }
+    </div>
+
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
+        <div class="col">
+            <h3>Frameworks</h3>
+        </div>
+    </div>
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
+        @{
+            if (Model.Frameworks.Count() < maximunForTwoColumns)
+            {
+                lists = Model.GetListWithPartitions(Model.Frameworks, 2);
+            }
+            else
+            {
+                lists = Model.GetListWithPartitions(Model.Frameworks, 3);
+            }
+        }
+
+        @foreach (var list in lists)
+        {
+            <div class="col">
+                @foreach (var framework in list)
+                {
+                    <p>@framework</p>
+                }
+            </div>
+        }
+    </div>
+
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
+        <div class="col">
+            <h3>VersionControl</h3>
+        </div>
+    </div>
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
+        @{
+            if (Model.VersionControl.Count() < maximunForTwoColumns)
+            {
+                lists = Model.GetListWithPartitions(Model.VersionControl, 2);
+            }
+            else
+            {
+                lists = Model.GetListWithPartitions(Model.VersionControl, 3);
+            }
+        }
+
+        @foreach (var list in lists)
+        {
+            <div class="col">
+                @foreach (var versionControl in list)
+                {
+                    <p>@versionControl</p>
+                }
+            </div>
+        }
+    </div>
+
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
+        <div class="col">
+            <h3>Architectures</h3>
+        </div>
+    </div>
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
+        @{
+            if (Model.Architectures.Count() < maximunForTwoColumns)
+            {
+                lists = Model.GetListWithPartitions(Model.Architectures, 2);
+            }
+            else
+            {
+                lists = Model.GetListWithPartitions(Model.Architectures, 3);
+            }
+        }
+
+        @foreach (var list in lists)
+        {
+            <div class="col">
+                @foreach (var architecture in list)
+                {
+                    <p>@architecture</p>
+                }
+            </div>
+        }
+    </div>
+
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
+        <div class="col">
+            <h3>WorkMethods</h3>
+        </div>
+    </div>
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
+        @{
+            if (Model.WorkMethods.Count() < maximunForTwoColumns)
+            {
+                lists = Model.GetListWithPartitions(Model.WorkMethods, 2);
+            }
+            else
+            {
+                lists = Model.GetListWithPartitions(Model.WorkMethods, 3);
+            }
+        }
+
+        @foreach (var list in lists)
+        {
+            <div class="col">
+                @foreach (var workMethod in list)
+                {
+                    <p>@workMethod</p>
+                }
+            </div>
+        }
+    </div>
+
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
+        <div class="col">
+            <h3>Diagrams</h3>
+        </div>
+    </div>
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
+        @{
+            if (Model.Diagrams.Count() < maximunForTwoColumns)
+            {
+                lists = Model.GetListWithPartitions(Model.Diagrams, 2);
+            }
+            else
+            {
+                lists = Model.GetListWithPartitions(Model.Diagrams, 3);
+            }
+        }
+
+        @foreach (var list in lists)
+        {
+            <div class="col">
+                @foreach (var diagram in list)
+                {
+                    <p>@diagram</p>
+                }
+            </div>
+        }
+    </div>
+
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
+        <div class="col">
+            <h3>APIS</h3>
+        </div>
+    </div>
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
+        @{
+            if (Model.APIS.Count() < maximunForTwoColumns)
+            {
+                lists = Model.GetListWithPartitions(Model.APIS, 2);
+            }
+            else
+            {
+                lists = Model.GetListWithPartitions(Model.APIS, 3);
+            }
+        }
+
+        @foreach (var list in lists)
+        {
+            <div class="col">
+                @foreach (var API in list)
+                {
+                    <p>@API</p>
+                }
+            </div>
+        }
+    </div>
+
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
+        <div class="col">
+            <h3>Tests</h3>
+        </div>
+    </div>
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
+        @{
+            if (Model.Tests.Count() < maximunForTwoColumns)
+            {
+                lists = Model.GetListWithPartitions(Model.Tests, 2);
+            }
+            else
+            {
+                lists = Model.GetListWithPartitions(Model.Tests, 3);
+            }
+        }
+
+        @foreach (var list in lists)
+        {
+            <div class="col">
+                @foreach (var test in list)
+                {
+                    <p>@test</p>
+                }
+            </div>
+        }
+    </div>
+
+    <div class="row text-center justify-content-md-center CentralSkillsTable">
+        <div class="col">
+            <h3>Others</h3>
+        </div>
+    </div>
+    <div class="row text-center justify-content-md-center" id="LowerSkillsTable">
+    @{
+        if (Model.Others.Count() < maximunForTwoColumns)
+        {
+            lists = Model.GetListWithPartitions(Model.Others, 2);
+        }
+        else
+        {
+            lists = Model.GetListWithPartitions(Model.Others, 3);
+        }
+    }
+
+    @foreach (var list in lists)
+    {
+        <div class="col">
+            @foreach (var others in list)
+            {
+                <p>@others</p>
+            }
+        </div>
+    }
 </div>

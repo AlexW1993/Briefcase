@@ -22,7 +22,8 @@ namespace Portfolio.Controllers
 
         public IActionResult Skills()
         {
-            return View();
+            var programmingTechnologies = new ProgrammingTechnologies();
+            return View(programmingTechnologies);
         }
 
         public IActionResult WorkExperience()

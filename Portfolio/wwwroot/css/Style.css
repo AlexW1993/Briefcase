@@ -2,4 +2,34 @@
     border-radius: 75%;
     width: 200px;
     margin: 40px;
+    border: 2px solid black;
 }
+
+#Skills{
+    margin: 100px;
+}
+
+#Skills  div  div  h3 {
+    color:red;
+    font-weight: 1000;
+}
+
+#Skills div div p {
+    color: black;
+    font-weight: 500;
+}
+
+#TopSkillsTable {
+    border-radius: 50px 50px 0 0;
+    box-shadow: 0px -5px 5px 0px gray, 5px 0px 5px 0px gray, -5px 0px 5px 0px gray;
+}
+
+.CentralSkillsTable {
+    box-shadow: 5px 0px 5px 0px gray, -5px -5px 5px 0px gray;
+}
+
+#LowerSkillsTable {
+    border-radius: 0 0 50px 50px;
+    box-shadow: 0px 5px 5px 5px gray, 5px 0px 5px -5px gray, 5px 0 5px -5px gray;
+}
+
