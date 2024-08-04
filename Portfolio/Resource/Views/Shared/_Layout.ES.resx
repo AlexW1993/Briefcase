@@ -117,14 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AboutMe" xml:space="preserve">
+    <value>Acerca de mí</value>
+  </data>
   <data name="All rights reserved" xml:space="preserve">
     <value>Todos los derechos reservados.</value>
   </data>
-  <data name="Portfolio" xml:space="preserve">
+  <data name="Briefcase" xml:space="preserve">
     <value>Portafolio</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Contacto</value>
   </data>
   <data name="Profile" xml:space="preserve">
     <value>Perfil de</value>
+  </data>
+  <data name="Projects" xml:space="preserve">
+    <value>Proyectos</value>
   </data>
   <data name="Skills" xml:space="preserve">
     <value>Habilidades</value>
