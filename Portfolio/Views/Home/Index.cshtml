@@ -1,4 +1,18 @@
 ﻿@using Microsoft.AspNetCore.Mvc.Localization;
 @inject IViewLocalizer watchResource;
+@model Profil;
 
-<partial name="_Presentation" model="watchResource" />
+<div class="row">
+    <partial name="_Presentation" model="watchResource" />
+</div>
+<div class="row">
+    <div class="col-4">
+        <partial name="_Forces" model="Model.Forces" />
+    </div>
+    <div class="col">
+        <partial name="_Studies"/>
+    </div>
+</div>
+<div class="row">
+    <partial name="_Contact" model="Model.Email" />
+</div>

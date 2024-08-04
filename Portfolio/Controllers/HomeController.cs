@@ -17,7 +17,8 @@ namespace Portfolio.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var profil = new Profil();
+            return View(profil);
         }
 
         public IActionResult Skills()
