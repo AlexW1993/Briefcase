@@ -23,36 +23,40 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Portfolio.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/Style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/aboutMe.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/contact.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/projects.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/skills.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/workExperiences.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
+    <header id="header">
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">William Alexander Hernandez</a>
+                <a id="myName" class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">William Alexander Hernandez</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <div  id="menu"class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class=" menu nav-item ">
+                        <li class="nav-item ">
                             <a class="nav-link " asp-area="" asp-controller="AboutMe" asp-action="Index">@watchResource["AboutMe"]</a>
                         </li>
-                        <li class="nav-item menu">
+                        <li class="menu">
                             <a class="nav-link " asp-area="" asp-controller="Projects" asp-action="Index">@watchResource["Projects"]</a>
                         </li>
-                        <li class="nav-item menu">
+                        <li class="nav-item">
                             <a class="nav-link " asp-area="" asp-controller="Skills" asp-action="Index">@watchResource["Skills"]</a>
                         </li>
-                        <li class="nav-item menu">
+                        <li class="nav-item">
                             <a class="nav-link " asp-area="" asp-controller="WorkExperiences" asp-action="Index">@watchResource["Work Experiences"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Contact" asp-action="Index">@watchResource["Contact"]</a>
+                            <a class="nav-link " asp-area="" asp-controller="Contact" asp-action="Index">@watchResource["Contact"]</a>
                         </li>
                     </ul>
-
                     <form class="d-flex" asp-controller="Home" asp-action="CultureConnexion" asp-route-URL="@currentURL">
                         <select name="newCulture"
                                 asp-for="@getCulture.RequestCulture.UICulture.Name"
@@ -70,9 +74,9 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer id="footer">
         <div class="container">
-            &copy; 2024 - @watchResource["Profile"] William Alexander Hernandez - @watchResource["All rights reserved"] - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2024 - @watchResource["Profile"] William Alexander Hernandez - @watchResource["All rights reserved"]
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

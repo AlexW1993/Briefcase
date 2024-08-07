@@ -31,4 +31,11 @@
     <Content Include="Resource\Views\Shared\_Layout.FR.resx" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="wwwroot\css\home.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
