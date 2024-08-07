@@ -20,15 +20,22 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Resource\Views\Home\Skills.EN.resx" />
-    <Content Include="Resource\Views\Home\Skills.ES.resx" />
-    <Content Include="Resource\Views\Home\Skills.FR.resx" />
+    <Content Include="Resource\Views\Skills\Index.EN.resx" />
+    <Content Include="Resource\Views\Skills\Index.ES.resx" />
+    <Content Include="Resource\Views\Skills\Index.FR.resx" />
     <Content Include="Resource\Views\Home\Index.EN.resx" />
     <Content Include="Resource\Views\Home\Index.ES.resx" />
     <Content Include="Resource\Views\Home\Index.FR.resx" />
     <Content Include="Resource\Views\Shared\_Layout.EN.resx" />
     <Content Include="Resource\Views\Shared\_Layout.ES.resx" />
     <Content Include="Resource\Views\Shared\_Layout.FR.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\css\home.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
