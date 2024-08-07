@@ -17,21 +17,9 @@ namespace Portfolio.Controllers
 
         public IActionResult Index()
         {
-            var profil = new Profil();
-            return View(profil);
-        }
-
-        public IActionResult Skills()
-        {
-            var programmingTechnologies = new ProgrammingTechnologies();
-            return View(programmingTechnologies);
-        }
-
-        public IActionResult WorkExperience()
-        {
             return View();
         }
-
+ 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

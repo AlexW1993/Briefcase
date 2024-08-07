@@ -1,8 +1,17 @@
-﻿#photo {
+﻿/*#photo {
     border-radius: 75%;
     width: 200px;
     margin: 40px;
     border: 2px solid black;
+}
+
+.menu {
+    
+}
+
+.menu a:hover{
+    color:darkred
+   
 }
 
 #Skills{
@@ -36,4 +45,4 @@
 #forcesSection {
     border: 2px solid #000;
     margin: 50px 0px 50px 0;
-}
+}*/

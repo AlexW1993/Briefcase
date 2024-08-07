@@ -138,7 +138,7 @@
   <data name="Skills" xml:space="preserve">
     <value>Compétences</value>
   </data>
-  <data name="Work Experience" xml:space="preserve">
-    <value>Experience de travail</value>
+  <data name="Work Experiences" xml:space="preserve">
+    <value>Expériences de travail</value>
   </data>
 </root>
