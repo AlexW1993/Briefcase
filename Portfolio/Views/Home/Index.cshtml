@@ -2,7 +2,14 @@
 @inject IViewLocalizer watchResource;
 @model Profil;
 
-<div class="row">
-    <partial name="_Presentation" model="watchResource" />
+<div id="homeContainer">
+    <div>
+        <img id="photo" src="~/Image/William.jpg" alt="William Alexander Hernandez" />
+    </div>
+    <div>
+        <h1>@watchResource["Welcome"]</h1>
+    </div>
 </div>
-
+<div id="homeText">
+    <p>@watchResource["Description"]</p>
+</div>

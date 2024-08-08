@@ -1,6 +1,67 @@
-﻿*#photo {
+﻿#homeContainer {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#homeContainer div {
+    flex: 1; 
+    margin: 10px; 
+    padding: 20px; 
+}
+
+#homeContainer div h1 {
+    animation: slideInFromRight 2s ease-out;
+}
+
+#homeText {
+    text-align: justify;
+    font-size: 20px;
+    animation: slideInFromBottom 3s ease-out;
+}
+
+#photo {
     border-radius: 75%;
-    width: 200px;
+    width: 300px;
     margin: 40px;
     border: 2px solid black;
+    animation: slideInFromLeft 2s ease-out;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100vw); 
+    }
+
+    100% {
+        transform: translateX(0); 
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100vw);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100vw);
+        opacity: 0.0;
+    }
+
+    50% {
+        transform: translateY(0);
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
