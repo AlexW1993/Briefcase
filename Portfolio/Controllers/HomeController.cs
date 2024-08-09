@@ -1,10 +1,9 @@
 using Portfolio.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-
 using Microsoft.AspNetCore.Localization;
 
-namespace Portfolio.Controllers
+namespace Briefcase.Controllers
 {
     public class HomeController : Controller
     {

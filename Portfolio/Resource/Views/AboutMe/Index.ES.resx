@@ -117,7 +117,38 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Skills" xml:space="preserve">
-    <value>Compétences</value>
+  <data name="Adapatation" xml:space="preserve">
+    <value>Adaptación</value>
+  </data>
+  <data name="Autonomy" xml:space="preserve">
+    <value>Autonomía</value>
+  </data>
+  <data name="Biography" xml:space="preserve">
+    <value>Técnico en informática en Guatemala, la vida me llevó a mudarme a Canadá y continuar mis estudios allí. Así que aquí estoy, 10 años después, bien establecido y con un DEC en técnicas de TI, desarrollo web y aspectos de aplicaciones móviles. Siendo muy ambicioso, continúo mis estudios en el BAC en informática. 
+
+Mi sueño es tener un impacto positivo en una empresa donde pueda crecer y seguir aprendiendo. Soy apasionado y busco constantemente mejorar mi trabajo y superar las expectativas. Tuve la oportunidad de trabajar tanto en el front-end como en el back-end en el desarrollo de software. No temo a los nuevos retos, me adapto fácilmente y tengo curiosidad por aprender cosas nuevas.
+
+Al ser un hombre trabajador, me encanta vivir nuevas aventuras en mi trabajo e intercambiar nuestras experiencias con otras personas que tienen la misma pasión que yo.</value>
+  </data>
+  <data name="Me" xml:space="preserve">
+    <value>¡Un poco sobre mi!</value>
+  </data>
+  <data name="My Forces" xml:space="preserve">
+    <value>Mis fuerzas</value>
+  </data>
+  <data name="Patience" xml:space="preserve">
+    <value>Patience</value>
+  </data>
+  <data name="Rigor" xml:space="preserve">
+    <value>Rigor</value>
+  </data>
+  <data name="Teamwork" xml:space="preserve">
+    <value>Trabajo en equipo</value>
+  </data>
+  <data name="Tenancity" xml:space="preserve">
+    <value>Tenacidad</value>
+  </data>
+  <data name="Versatility" xml:space="preserve">
+    <value>Versatilidad</value>
   </data>
 </root>

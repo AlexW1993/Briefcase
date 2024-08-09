@@ -117,7 +117,38 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Skills" xml:space="preserve">
-    <value>Skills</value>
+  <data name="Adapatation" xml:space="preserve">
+    <value>Adaptation</value>
+  </data>
+  <data name="Autonomy" xml:space="preserve">
+    <value>Autonomie</value>
+  </data>
+  <data name="Biography" xml:space="preserve">
+    <value>Technicien en informatique au Guatemala, la vie m'a amené à déménager au Canada et y poursuivre mes études. Me voilà donc 10 ans plus tard, bien établit et titulaire d'un DEC en techniques de l'informatique, volet développement web et application mobile. Étant très ambitieux, je poursuit mes études au BAC en informatique. 
+
+Mon rêve, avoir un impact positif dans une entreprise où je peux grandir et continuer d'apprendre. Je suis passionné et je cherche constamment à améliorer mon travail et à dépasser les attentes fixées. J’ai eu la chance de travailler autant du côté front-end et que back-end dans la réalisation de logiciels. Je ne crains pas les nouveaux défis, je m’adapte facilement et je suis curieux d’apprendre de nouvelles choses.
+
+Étant un homme travaillant, j'adore vivre de nouvelles aventures dans mon travail et échanger nos expériences avec d'autres personnes qui ont cette même passion que moi.</value>
+  </data>
+  <data name="Me" xml:space="preserve">
+    <value>Un peu de moi!</value>
+  </data>
+  <data name="My Forces" xml:space="preserve">
+    <value>Mes forces</value>
+  </data>
+  <data name="Patience" xml:space="preserve">
+    <value>Patience</value>
+  </data>
+  <data name="Rigor" xml:space="preserve">
+    <value>Rigueur</value>
+  </data>
+  <data name="Teamwork" xml:space="preserve">
+    <value>Travail d'équipe</value>
+  </data>
+  <data name="Tenancity" xml:space="preserve">
+    <value>Ténacité</value>
+  </data>
+  <data name="Versatility" xml:space="preserve">
+    <value>Versatilité</value>
   </data>
 </root>

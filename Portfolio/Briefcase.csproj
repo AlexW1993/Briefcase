@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -14,15 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Remove="Resource\Views\Home\Skills.EN.resx" />
-    <EmbeddedResource Remove="Resource\Views\Home\Skills.ES.resx" />
-    <EmbeddedResource Remove="Resource\Views\Home\Skills.FR.resx" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Resource\Views\Skills\Index.EN.resx" />
-    <Content Include="Resource\Views\Skills\Index.ES.resx" />
-    <Content Include="Resource\Views\Skills\Index.FR.resx" />
     <Content Include="Resource\Views\Home\Index.EN.resx" />
     <Content Include="Resource\Views\Home\Index.ES.resx" />
     <Content Include="Resource\Views\Home\Index.FR.resx" />
