@@ -6,6 +6,14 @@
 @{
     ViewData["Forces"] = Model.Forces;
 
+    var skills = new List<Language>
+    {
+        new Language("Español",10,10,10,10),
+        new Language("Inglés",1,1,1,1),
+    };
+
+    ViewBag.Languages = skills.Select(s => s.Name).ToArray();
+    ViewBag.Levels = skills.Select(s => s.ListeningLevel).ToArray();
 }
 
 <div>
@@ -22,3 +30,10 @@
         <partial name="_Languages" model="Model" />
     </div>
 </div>
+
+<script>
+    window.chartData = {
+        Languages: @Html.Raw(Json.Serialize(ViewBag.Languages)),
+        Levels: @Html.Raw(Json.Serialize(ViewBag.Levels))
+        };
+</script>

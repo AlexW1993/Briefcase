@@ -35,9 +35,9 @@
         {
             List<Language> languages = new List<Language>()
             {
-                new Language("Spanish", 10),
-                new Language("English", 4),
-                new Language("French", 8),
+                new Language("Spanish", 10,9,10,10),
+                new Language("English", 4,6,6,5),
+                new Language("French", 8,8,8,8),
             };
 
             return languages;
