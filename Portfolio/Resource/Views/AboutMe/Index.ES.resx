@@ -142,6 +142,9 @@ Al ser un hombre trabajador, me encanta vivir nuevas aventuras en mi trabajo e i
   <data name="Rigor" xml:space="preserve">
     <value>Rigor</value>
   </data>
+  <data name="Speaking" xml:space="preserve">
+    <value>Hablar</value>
+  </data>
   <data name="Teamwork" xml:space="preserve">
     <value>Trabajo en equipo</value>
   </data>

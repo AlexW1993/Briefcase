@@ -142,6 +142,9 @@ Mon rêve, avoir un impact positif dans une entreprise où je peux grandir et co
   <data name="Rigor" xml:space="preserve">
     <value>Rigueur</value>
   </data>
+  <data name="Speaking" xml:space="preserve">
+    <value>Parlant</value>
+  </data>
   <data name="Teamwork" xml:space="preserve">
     <value>Travail d'équipe</value>
   </data>
