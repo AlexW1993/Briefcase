@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Reflection;
 
-namespace Portfolio.Models
+namespace Briefcase.Models
 {
     public class ProgrammingTechnologies
     {
@@ -27,13 +27,13 @@ namespace Portfolio.Models
             Diagrams = GetDiagrams();
             APIS = GetAPIS();
             Others = GetOthers();
-            Tests = GetTests(); 
+            Tests = GetTests();
         }
 
-        private List<string> GetLanguages() 
+        private List<string> GetLanguages()
         {
             string[] languages = {
-                "C#", "HTML", "CSS", "SQL", "MySQL", "XAML", "Java", "Kotlin" 
+                "C#", "HTML", "CSS", "SQL", "MySQL", "XAML", "Java", "Kotlin"
             };
 
             return languages.ToList();

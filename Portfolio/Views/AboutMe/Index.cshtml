@@ -1,7 +1,33 @@
-﻿@using Microsoft.AspNetCore.Mvc.Localization;
+﻿@using Briefcase.Models
+@using Microsoft.AspNetCore.Mvc.Localization;
 @inject IViewLocalizer watchResource;
-@model List<string>;
+@model Profil;
 
-<div class="row">
-    <partial name="_Forces" model="Model" />
+@{
+    ViewData["Forces"] = Model.Forces;
+}
+
+<div>
+    <partial name="_Biography" model="watchResource" />
 </div>
+<div >
+    <partial name="_Formations" model="Model" />
+</div>
+<div id="aboutMeContainer">
+    <div >
+        <partial name="_Forces" model="watchResource" />
+    </div>
+    <div >
+        <partial name="_Languages" model="Model" />
+    </div>
+</div>
+
+<script>
+    window.chartData = {
+        Languages: @Html.Raw(Json.Serialize(Model.Languages.Select(s => s.Name).ToArray())),
+        ListeningLevels: @Html.Raw(Json.Serialize(Model.Languages.Select(s => s.ListeningLevel).ToArray())),
+        ReadingLevels: @Html.Raw(Json.Serialize(Model.Languages.Select(s => s.ReadingLevel).ToArray())),
+        SpeakingLevels: @Html.Raw(Json.Serialize(Model.Languages.Select(s => s.SpeakingLevel).ToArray())),
+        WritingLevels: @Html.Raw(Json.Serialize(Model.Languages.Select(s => s.WritingLevel).ToArray())),
+    };
+</script>

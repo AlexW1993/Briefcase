@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Portfolio.Models;
+﻿using Briefcase.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Briefcase.Controllers
 {

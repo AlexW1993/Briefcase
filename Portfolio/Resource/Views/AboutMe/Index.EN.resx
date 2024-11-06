@@ -117,7 +117,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Skills" xml:space="preserve">
-    <value>Skills</value>
+  <data name="Adapatation" xml:space="preserve">
+    <value>Adapatation</value>
+  </data>
+  <data name="Autonomy" xml:space="preserve">
+    <value>Autonomy</value>
+  </data>
+  <data name="Biography" xml:space="preserve">
+    <value>Computer technician in Guatemala, life led me to move to Canada and continue my studies there. So here I am 10 years later, well established and holding a DEC in IT techniques, web development and mobile application aspect. Being very ambitious, I am continuing my studies at the BAC in computer science. 
+
+My dream is to have a positive impact in a company where I can grow and continue to learn. I am passionate and constantly looking to improve my work and exceed expectations. I had the chance to work on both the front-end and back-end sides in software development. I don't fear new challenges, I adapt easily and I am curious to learn new things.
+
+Being a working man, I love experiencing new adventures in my work and exchanging our experiences with other people who have the same passion as me.</value>
+  </data>
+  <data name="Me" xml:space="preserve">
+    <value>A little about me!</value>
+  </data>
+  <data name="My Forces" xml:space="preserve">
+    <value>My Forces</value>
+  </data>
+  <data name="Patience" xml:space="preserve">
+    <value>Patience</value>
+  </data>
+  <data name="Rigor" xml:space="preserve">
+    <value>Rigor</value>
+  </data>
+  <data name="Speaking" xml:space="preserve">
+    <value>Speaking</value>
+  </data>
+  <data name="Teamwork" xml:space="preserve">
+    <value>Teamwork</value>
+  </data>
+  <data name="Tenancity" xml:space="preserve">
+    <value>Tenancity</value>
+  </data>
+  <data name="Versatility" xml:space="preserve">
+    <value>Versatility</value>
   </data>
 </root>
